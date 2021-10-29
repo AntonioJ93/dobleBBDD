@@ -10,13 +10,14 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import com.deportessa.proyectodeportes.daojpa.TarjetaLocal;
+import com.deportessa.proyectodeportes.daojpa.mysql.TarjetaMySqlLocal;
 
 /**
  *
  * @author Antonio
  */
 @Stateless
-public class TarjetaMySqlImpl extends DaoGenericoAbstracto<Tarjeta, Integer> implements TarjetaLocal {
+public class TarjetaMySqlImpl extends DaoGenericoAbstracto<Tarjeta, Integer> implements TarjetaMySqlLocal {
 
     @PersistenceContext(unitName = "pu")
     private EntityManager em;

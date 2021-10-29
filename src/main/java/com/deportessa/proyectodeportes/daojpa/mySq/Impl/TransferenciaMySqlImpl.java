@@ -9,14 +9,14 @@ import com.deportessa.proyectodeportes.modelo.Transferencia;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import com.deportessa.proyectodeportes.daojpa.TransferenciaLocal;
+import com.deportessa.proyectodeportes.daojpa.mysql.TransferenciaMySqlLocal;
 
 /**
  *
  * @author Antonio
  */
 @Stateless
-public class TransferenciaMySqlImpl extends DaoGenericoAbstracto<Transferencia, Integer> implements TransferenciaLocal {
+public class TransferenciaMySqlImpl extends DaoGenericoAbstracto<Transferencia, Integer> implements TransferenciaMySqlLocal {
 
     @PersistenceContext(unitName = "pu")
     private EntityManager em;

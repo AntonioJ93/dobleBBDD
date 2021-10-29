@@ -10,13 +10,14 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import com.deportessa.proyectodeportes.daojpa.EntrenadorLocal;
+import com.deportessa.proyectodeportes.daojpa.mysql.EntrenadorMySqlLocal;
 
 /**
  *
  * @author Antonio
  */
 @Stateless
-public class EntrenadorMySqlImpl extends DaoGenericoAbstracto<Entrenador, Integer> implements EntrenadorLocal {
+public class EntrenadorMySqlImpl extends DaoGenericoAbstracto<Entrenador, Integer> implements EntrenadorMySqlLocal {
 
     @PersistenceContext(unitName = "pu")
     private EntityManager em;

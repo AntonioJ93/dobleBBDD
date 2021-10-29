@@ -10,13 +10,14 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import com.deportessa.proyectodeportes.daojpa.InscripcionLocal;
+import com.deportessa.proyectodeportes.daojpa.mysql.InscripcionMySqlLocal;
 
 /**
  *
  * @author Antonio
  */
 @Stateless
-public class InscripcionMySqlImpl extends DaoGenericoAbstracto<Inscripcion, Integer> implements InscripcionLocal {
+public class InscripcionMySqlImpl extends DaoGenericoAbstracto<Inscripcion, Integer> implements InscripcionMySqlLocal {
 
     @PersistenceContext(unitName = "pu")
     private EntityManager em;

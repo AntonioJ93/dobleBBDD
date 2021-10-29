@@ -10,13 +10,14 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import com.deportessa.proyectodeportes.daojpa.MetodoPagoLocal;
+import com.deportessa.proyectodeportes.daojpa.mysql.MetodoPagoMySqlLocal;
 
 /**
  *
  * @author Antonio
  */
 @Stateless
-public class MetodoPagoMySqlImpl extends DaoGenericoAbstracto<MetodoPago, Integer> implements MetodoPagoLocal {
+public class MetodoPagoMySqlImpl extends DaoGenericoAbstracto<MetodoPago, Integer> implements MetodoPagoMySqlLocal {
 
     @PersistenceContext(unitName = "pu")
     private EntityManager em;

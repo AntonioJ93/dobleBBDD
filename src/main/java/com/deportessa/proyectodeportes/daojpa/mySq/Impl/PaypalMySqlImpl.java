@@ -10,13 +10,14 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import com.deportessa.proyectodeportes.daojpa.PaypalLocal;
+import com.deportessa.proyectodeportes.daojpa.mysql.PayPalMySqlLocal;
 
 /**
  *
  * @author Antonio
  */
 @Stateless
-public class PaypalMySqlImpl extends DaoGenericoAbstracto<Paypal, Integer> implements PaypalLocal {
+public class PaypalMySqlImpl extends DaoGenericoAbstracto<Paypal, Integer> implements PayPalMySqlLocal {
 
     @PersistenceContext(unitName = "pu")
     private EntityManager em;
