@@ -9,7 +9,6 @@ import com.deportessa.proyectodeportes.modelo.Actividad;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import com.deportessa.proyectodeportes.daojpa.ActividadLocal;
 import com.deportessa.proyectodeportes.daojpa.mysql.ActividadMySqlLocal;
 
 /**

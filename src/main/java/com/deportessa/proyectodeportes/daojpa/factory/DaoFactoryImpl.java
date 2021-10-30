@@ -14,29 +14,6 @@ import javax.inject.Inject;
 @Stateless
 public class DaoFactoryImpl implements DaoFactoryLocal {
 
-//    @Inject
-//    private ActividadLocal actividadLocal;
-//    
-//    @Inject
-//    private ClienteLocal clienteLocal;
-//    
-//    @Inject
-//    private EntrenadorLocal entrenadorLocal;
-//    
-//    @Inject
-//    private InscripcionLocal inscripcionLocal;
-//    
-//    @Inject
-//    private MetodoPagoLocal metodoPagoLocal;
-//    
-//    @Inject
-//    private TarjetaLocal tarjetaLocal;
-//    
-//    @Inject 
-//    private PaypalLocal paypalLocal;
-//    
-//    @Inject 
-//    private TransferenciaLocal transferenciaLocal;
     
     @Inject
     private DaoMySqlLocal daoMySql;

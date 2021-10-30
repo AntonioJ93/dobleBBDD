@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -50,6 +51,16 @@ public class Entrenador implements Serializable {
     private Date fechaAltaEntrenador;
 
     public Entrenador() {
+    }
+    
+    @PrePersist
+    private void setFechaActual(){
+        fechaAltaEntrenador=new Date();
+    }
+    
+    public Entrenador(String nombreEntrenador, String apellido1Entrenador) {
+        this.nombreEntrenador = nombreEntrenador;
+        this.apellido1Entrenador = apellido1Entrenador;
     }
 
     public Entrenador(Integer idEntrenador) {

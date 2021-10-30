@@ -28,6 +28,7 @@ import com.deportessa.proyectodeportes.daojpa.InscripcionLocal;
 import com.deportessa.proyectodeportes.daojpa.MetodoPagoLocal;
 import com.deportessa.proyectodeportes.daojpa.factory.DaoFactoryLocal;
 import com.deportessa.proyectodeportes.daojpa.factory.DaoMySqlLocal;
+import com.deportessa.proyectodeportes.modelo.Entrenador;
 
 /**
  *
@@ -134,15 +135,19 @@ public class PruebaDAO extends HttpServlet {
         }
 ////////////// INSCRIPCIONES  /////////////////////////
         Inscripcion insc = new Inscripcion(futbol, dao.getClienteMySqlLocal().find(cliente1.getIdCliente()).getMetodosPagoCliente().get(0));
-        mp=dao.getClienteMySqlLocal().findByEmail("prueba@email.com").get().getMetodosPagoCliente().get(0);
+//        mp=dao.getClienteMySqlLocal().findByEmail("prueba@email.com").get().getMetodosPagoCliente().get(0);
  //       mp=cliente1.getMetodosPagoCliente().get(0);
-        mp.addInscripcion(insc);
-        dao.getMetodoPagoMySqlLocal().edit(mp);
+//        mp.addInscripcion(insc);
+//        dao.getMetodoPagoMySqlLocal().edit(mp);
+    dao.getInscripcionMySqlLocal().create(insc);
 //        try {
 //            metodoDAO.edit(mp);
 //        } catch (Exception ex) {
 //            Logger.getLogger(PruebaDAO.class.getName()).log(Level.SEVERE, null, ex);
 //        }
+    Actividad acti=dao.getActividadMySqlLocal().find(1);
+    acti.setIdEntrenadorActividad(new Entrenador("Juan", "Martínez"));
+    dao.getActividadMySqlLocal().edit(acti);
         System.out.println(mp.getInscripciones().size());
         
         
